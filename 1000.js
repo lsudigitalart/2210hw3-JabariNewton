@@ -23,11 +23,11 @@ function draw() {
 if(myCounter < 200){
 
     stroke(350,350,350);
-      ellipse(xValue,yValue,10,10,50,transVar);
+      ellipse(xValue,yValue,.5,.5,50,transVar);
       xValue = xValue + 15;
       transVar = transVar - 1;
 
-      if(xValue > 300){
+      if(xValue > 600){
         xValue = 10;
 
         yValue = yValue + 15;
