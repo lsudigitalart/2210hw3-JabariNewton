@@ -1,5 +1,7 @@
-var xDistance = 0;
+var xValue = 10;
+var yValue = 10;
 var a=0;
+var transVar = 100;
 var testVar= 0;
 var testVarTwo = 0;
 var randomNum = Math.floor(Math.random() * (360 + 1) + 0);
@@ -8,44 +10,33 @@ var redColor =0;
 var greenColor = 0;
 var blueColor =0;
 var myCounter =0;
+
 function setup() {
-  createCanvas(600,20);
+  createCanvas(600,600);
+  background(xValue,133,142);
+
 }
 
 
 function draw() {
 
-  stroke(340);
-  fill(350);
+if(myCounter < 200){
 
-    background(redColor,greenColor,blueColor);
+    stroke(350,350,350);
+      ellipse(xValue,yValue,10,10,50,transVar);
+      xValue = xValue + 15;
+      transVar = transVar - 1;
 
-    if(smallRandom >= 70){
-      redColor = redColor + 1;
-      greenColor = greenColor + 2;
-      blueColor = blueColor + 5;
-    }
-    else if(smallRandom >= 40){
-      greenColor = greenColor + 1;
-      redColor = reColor + 3;
-      blueColor = randomNum;
-      blueColor = blueColor + .75;
-    }
-    else {
-      blueColor =  blueColor + 1;
-      greenColor = smallRandom;
-      greenColor = greenColor + 1;
-      blueColor = blueColor +3;
-      redColor = redColor + 4;
-    }
-    ellipse(testVar,10,40,200);
-    testVar = testVar +1;
+      if(xValue > 300){
+        xValue = 10;
+
+        yValue = yValue + 15;
+      }
+
+
+}
+}
 
 
     //ellipse(300,300, randomNum, randomNum);
   //  ellipse(testVar,testVarTwo, 20, 20);
-
-
-
-
-}
